@@ -187,6 +187,69 @@
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-20px); }
     }
+
+    /* Media query for smaller screens */
+    @media (max-width: 768px) {
+      header {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero {
+        padding: 40px 10px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .tags {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .tag {
+        margin-bottom: 5px;
+      }
+
+      .phone {
+        width: 90%;
+      }
+
+      .waves {
+        width: 600px;
+        height: 600px;
+      }
+
+      .floating-cards {
+        display: none; /* Hide floating cards on smaller screens */
+      }
+    }
   </style>
 </head>
 <body>
