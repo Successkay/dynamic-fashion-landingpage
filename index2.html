@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lifestyle Fashion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .btn-outline {
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+    }
+
+    .btn-dark {
+      background: #000;
+      color: #fff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .tags {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      padding: 8px 15px;
+      border-radius: 20px;
+      background: #f9f9f9;
+      border: 1px solid #eee;
+      font-size: 14px;
+    }
+
+    .phone {
+      width: 280px;
+      margin: 40px auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .phone img {
+      width: 100%;
+      border-radius: 30px;
+      filter: blur(0px); /* Initial blur */
+    }
+
+    /* Background waves */
+    .waves {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 800px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .wave {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 6px solid rgba(255, 0, 100, 0.1); /* Increased border width */
+      border-radius: 50%;
+      animation: pulse 6s infinite ease-in-out;
+    }
+
+    .wave:nth-child(2) {
+      animation-delay: 2s;
+    }
+
+    .wave:nth-child(3) {
+      animation-delay: 4s;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.8); opacity: 0.6; }
+      50% { transform: scale(1.1); opacity: 0.3; }
+      100% { transform: scale(0.8); opacity: 0.6; }
+    }
+
+    /* Floating photo cards */
+    .floating-cards {
+      position: absolute;
+      top: 60%; /* Adjusted from 50% to 60% */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .card {
+      position: absolute;
+      width: 120px;
+      height: 160px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card:nth-child(1) { top: 15%; left: 20%; animation-delay: 0s; transform: rotate(-10deg); } /* Added rotation */
+    .card:nth-child(2) { top: 25%; right: 20%; animation-delay: 1s; transform: rotate(15deg); } /* Added rotation */
+    .card:nth-child(3) { bottom: 20%; left: 25%; animation-delay: 2s; transform: rotate(10deg); } /* Added rotation */
+    .card:nth-child(4) { bottom: 15%; right: 25%; animation-delay: 3s; transform: rotate(-15deg); } /* Added rotation */
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div style="width:30px;height:30px;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;border-radius:5px;font-size:14px;">JF</div>
+      Lifestyle
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Trends</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="buttons">
+      <button class="btn btn-outline">Log in</button>
+      <button class="btn btn-dark">Get the App</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <!-- Background Waves -->
+    <div class="waves">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+
+    <!-- Floating Cards -->
+    <div class="floating-cards">
+      <div class="card"><img src="mock2.jpg" alt="Fashion 1"></div>
+      <div class="card"><img src="mock1.jpg" alt="Fashion 2"></div>
+      <div class="card"><img src="mock3.jpg" alt="Fashion 3"></div>
+      <div class="card"><img src="mock4.jpg" alt="Fashion 4"></div>
+    </div>
+
+    <div class="phone">
+      <img src="1-removebg-preview.png" alt="mockup2">
+    </div>
+
+    <h1>Shop Exclusive Styles Perfect <br> for your Fashion Lifestyle.</h1>
+    <div class="tags">
+      <div class="tag">✔ Daily Fashion Trends</div>
+      <div class="tag">✔ New Arrivals</div>
+      <div class="tag">✔ Style Recommendations</div>
+    </div>
+    <p>Elevate your latest style by shopping trending, <br> substance and classic fashion styles!</p>
+    <button class="btn btn-dark">Get the App ↗</button>
+  </section>
+</body>
+</html>
